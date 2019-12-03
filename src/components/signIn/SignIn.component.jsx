@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { signInWithGoogle } from "../../firebase/firebase.utils";
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 // styles
 import "./SignIn.styles.scss";
 
@@ -17,9 +17,17 @@ class SignIn extends Component {
     };
   }
 
-  handelSubmit = e => {
+  handelSubmit = async e => {
     e.preventDefault();
-    this.setState({ email: "", password: "" });
+
+    const {email, password} = this.state;
+
+    try {
+      auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   handleChange = e => {
