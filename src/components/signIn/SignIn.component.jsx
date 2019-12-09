@@ -6,7 +6,7 @@ import "./SignIn.styles.scss";
 
 // components
 import { FormInput } from "../../components/formInput/FormInput.component";
-import { CustomButton } from "../customButton/customButton.component";
+import CustomButton from "../customButton/CustomButton.component";
 
 class SignIn extends Component {
   constructor(props) {
