@@ -1,6 +1,6 @@
 import { userActionTypes } from "./user.types";
 
-// set the initial setr to null
+// set the initial state to null
 const INITIAL_STATE = {
   currentUser: null
 };
