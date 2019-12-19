@@ -1,6 +1,5 @@
-import SHOP_DATA from "./shop.data";
+import SHOP_DATA from './shop.data';
 
-// set the initial state
 const INITIAL_STATE = {
   collections: SHOP_DATA
 };
