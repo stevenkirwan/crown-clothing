@@ -14,7 +14,7 @@ import MenuItem from "../menuItem/MenuItem.component";
 const Directory = ({ sections }) => (
   <div className="directory-menu">
     {sections.map(({ id, ...otherSectionProps }) => {
-      return <MenuItem id={id} {...otherSectionProps} />;
+      return <MenuItem key={id} id={id} {...otherSectionProps} />;
     })}
   </div>
 );
