@@ -17,7 +17,7 @@ import CartIcon from "../cart-icon/CartIcon.component";
 import CartDropdown from "../cart-dropdown/CartDropdown.component";
 
 // styles
-import {HeaderContainer, LogoConatiner, OptionContainer, OptionDiv, OptionLink} from "./Header.styles";
+import {HeaderContainer, LogoConatiner, OptionContainer, OptionLink} from "./Header.styles";
 
 const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
@@ -32,9 +32,9 @@ const Header = ({ currentUser, hidden }) => (
         Contact
       </OptionLink>
       {currentUser ? (
-        <OptionDiv onClick={() => auth.signOut()}>
+        <OptionLink as="div" onClick={() => auth.signOut()}>
           Sign Out
-        </OptionDiv>
+        </OptionLink>
       ) : (
         <OptionLink to="/signin">
           Sign In
